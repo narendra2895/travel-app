@@ -12,7 +12,7 @@ const App = () => {
     const [places, setPlaces] = useState([]);
 
     const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
-    const [bounds, setBounds] = useState({ ne: { lat: 0, lng: 0 }, sw: { lat: 0, lng: 0 } });
+    const [bounds, setBounds] = useState({  });
 
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const App = () => {
                     <List places={places}/>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                    <Map setCoordinates={setCoordinates} setBounds={setBounds} coordinates={coordinates} />
+                    <Map setCoordinates={setCoordinates} setBounds={setBounds} coordinates={coordinates}  places={places} />
                 </Grid>
             </Grid>
         </>
